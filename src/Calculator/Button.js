@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CalculatorData from './CalculatorContext'
 
-const Button = ({btn , handleClick, handleClear}) => {
+const Button = ({btn}) => {
+    let {handleClick,handleClear} = useContext(CalculatorData)
     let handleFunction = (value) => {
         if(value=="C") {
             handleClear(value)

@@ -1,7 +1,8 @@
 import React from 'react'
 import Button from './Button'
 
-const ButtonComp = ({handleClick,handleClear}) => {
+const ButtonComp = () => {
+  
     let buttons =[
         '7','8','9','/',
         '4','5','6','*',
@@ -11,9 +12,10 @@ const ButtonComp = ({handleClick,handleClear}) => {
   return (
     <div className='button-element'>
         {buttons.map((btn)=>(
-           <Button key={btn} btn={btn} handleClick={handleClick} handleClear={handleClear}/> 
+           <Button key={btn} btn={btn}/>
+           
         ))}
-        <Button btn={"C"}  handleClick={handleClick} handleClear={handleClear}/>
+        <Button btn={"C"}/>
     </div>
   )
 }
